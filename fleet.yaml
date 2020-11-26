@@ -1,6 +1,6 @@
 # The namespace this chart will be installed to,
 # if not specified the chart will be installed to "default"
-namespace: 003-istio-system
+defaultNamespace: 003-istio-system
 
 # Custom helm options
 helm:
