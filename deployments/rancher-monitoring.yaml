@@ -1,0 +1,5134 @@
+apiVersion: catalog.cattle.io/v1
+kind: App
+metadata:
+  annotations:
+    objectset.rio.cattle.io/applied: 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
+    objectset.rio.cattle.io/id: helm-app
+    objectset.rio.cattle.io/owner-gvk: /v1, Kind=Secret
+    objectset.rio.cattle.io/owner-name: sh.helm.release.v1.rancher-monitoring.v1
+    objectset.rio.cattle.io/owner-namespace: cattle-monitoring-system
+  creationTimestamp: "2020-11-26T22:17:39Z"
+  generation: 2
+  labels:
+    objectset.rio.cattle.io/hash: afd0d9d7cfc6e6d7ab5c7044fb2bc771e55109c1
+  managedFields:
+  - apiVersion: catalog.cattle.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:objectset.rio.cattle.io/applied: {}
+          f:objectset.rio.cattle.io/id: {}
+          f:objectset.rio.cattle.io/owner-gvk: {}
+          f:objectset.rio.cattle.io/owner-name: {}
+          f:objectset.rio.cattle.io/owner-namespace: {}
+        f:labels:
+          .: {}
+          f:objectset.rio.cattle.io/hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a072f2-3319-48e1-92e3-f9e0a200968a"}:
+            .: {}
+            f:apiVersion: {}
+            f:blockOwnerDeletion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        .: {}
+        f:chart:
+          .: {}
+          f:metadata:
+            .: {}
+            f:annotations:
+              .: {}
+              f:artifacthub.io/links: {}
+              f:artifacthub.io/operator: {}
+              f:catalog.cattle.io/auto-install: {}
+              f:catalog.cattle.io/certified: {}
+              f:catalog.cattle.io/display-name: {}
+              f:catalog.cattle.io/namespace: {}
+              f:catalog.cattle.io/provides-gvr: {}
+              f:catalog.cattle.io/release-name: {}
+              f:catalog.cattle.io/ui-component: {}
+              f:catalog.cattle.io/ui-source-repo: {}
+              f:catalog.cattle.io/ui-source-repo-type: {}
+            f:apiVersion: {}
+            f:appVersion: {}
+            f:description: {}
+            f:home: {}
+            f:icon: {}
+            f:keywords: {}
+            f:maintainers: {}
+            f:name: {}
+            f:sources: {}
+            f:version: {}
+          f:values:
+            .: {}
+            f:additionalPrometheusRules: {}
+            f:alertmanager:
+              .: {}
+              f:alertmanagerSpec:
+                .: {}
+                f:additionalPeers: {}
+                f:affinity: {}
+                f:configMaps: {}
+                f:containers: {}
+                f:externalUrl: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:sha: {}
+                  f:tag: {}
+                f:listenLocal: {}
+                f:logFormat: {}
+                f:logLevel: {}
+                f:nodeSelector: {}
+                f:paused: {}
+                f:podAntiAffinity: {}
+                f:podAntiAffinityTopologyKey: {}
+                f:podMetadata: {}
+                f:portName: {}
+                f:priorityClassName: {}
+                f:replicas: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:retention: {}
+                f:routePrefix: {}
+                f:secrets: {}
+                f:securityContext:
+                  .: {}
+                  f:fsGroup: {}
+                  f:runAsGroup: {}
+                  f:runAsNonRoot: {}
+                  f:runAsUser: {}
+                f:storage: {}
+                f:tolerations: {}
+                f:useExistingSecret: {}
+              f:apiVersion: {}
+              f:config:
+                .: {}
+                f:global:
+                  .: {}
+                  f:resolve_timeout: {}
+                f:receivers: {}
+                f:route:
+                  .: {}
+                  f:group_by: {}
+                  f:group_interval: {}
+                  f:group_wait: {}
+                  f:receiver: {}
+                  f:repeat_interval: {}
+                  f:routes: {}
+                f:templates: {}
+              f:enabled: {}
+              f:ingress:
+                .: {}
+                f:annotations: {}
+                f:enabled: {}
+                f:hosts: {}
+                f:labels: {}
+                f:paths: {}
+                f:tls: {}
+              f:ingressPerReplica:
+                .: {}
+                f:annotations: {}
+                f:enabled: {}
+                f:hostDomain: {}
+                f:hostPrefix: {}
+                f:labels: {}
+                f:paths: {}
+                f:tlsSecretName: {}
+                f:tlsSecretPerReplica:
+                  .: {}
+                  f:enabled: {}
+                  f:prefix: {}
+              f:podDisruptionBudget:
+                .: {}
+                f:enabled: {}
+                f:maxUnavailable: {}
+                f:minAvailable: {}
+              f:secret:
+                .: {}
+                f:annotations: {}
+                f:cleanupOnUninstall: {}
+                f:image:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:securityContext:
+                  .: {}
+                  f:runAsNonRoot: {}
+                  f:runAsUser: {}
+              f:service:
+                .: {}
+                f:annotations: {}
+                f:clusterIP: {}
+                f:externalIPs: {}
+                f:labels: {}
+                f:loadBalancerIP: {}
+                f:loadBalancerSourceRanges: {}
+                f:nodePort: {}
+                f:port: {}
+                f:targetPort: {}
+                f:type: {}
+              f:serviceAccount:
+                .: {}
+                f:annotations: {}
+                f:create: {}
+                f:name: {}
+              f:serviceMonitor:
+                .: {}
+                f:interval: {}
+                f:metricRelabelings: {}
+                f:relabelings: {}
+                f:selfMonitor: {}
+              f:servicePerReplica:
+                .: {}
+                f:annotations: {}
+                f:enabled: {}
+                f:loadBalancerSourceRanges: {}
+                f:nodePort: {}
+                f:port: {}
+                f:targetPort: {}
+                f:type: {}
+              f:templateFiles:
+                .: {}
+                f:rancher_defaults.tmpl: {}
+              f:tplConfig: {}
+            f:commonLabels: {}
+            f:coreDns:
+              .: {}
+              f:enabled: {}
+              f:service:
+                .: {}
+                f:port: {}
+                f:targetPort: {}
+              f:serviceMonitor:
+                .: {}
+                f:interval: {}
+                f:metricRelabelings: {}
+                f:relabelings: {}
+            f:defaultRules:
+              .: {}
+              f:annotations: {}
+              f:appNamespacesTarget: {}
+              f:create: {}
+              f:labels: {}
+              f:rules:
+                .: {}
+                f:alertmanager: {}
+                f:etcd: {}
+                f:general: {}
+                f:k8s: {}
+                f:kubeApiserver: {}
+                f:kubeApiserverAvailability: {}
+                f:kubeApiserverError: {}
+                f:kubeApiserverSlos: {}
+                f:kubePrometheusGeneral: {}
+                f:kubePrometheusNodeAlerting: {}
+                f:kubePrometheusNodeRecording: {}
+                f:kubeScheduler: {}
+                f:kubeStateMetrics: {}
+                f:kubelet: {}
+                f:kubernetesAbsent: {}
+                f:kubernetesApps: {}
+                f:kubernetesResources: {}
+                f:kubernetesStorage: {}
+                f:kubernetesSystem: {}
+                f:network: {}
+                f:node: {}
+                f:prometheus: {}
+                f:prometheusOperator: {}
+                f:time: {}
+              f:runbookUrl: {}
+            f:fullnameOverride: {}
+            f:global:
+              .: {}
+              f:cattle:
+                .: {}
+                f:systemDefaultRegistry: {}
+              f:imagePullSecrets: {}
+              f:kubectl:
+                .: {}
+                f:pullPolicy: {}
+                f:repository: {}
+                f:tag: {}
+              f:rbac:
+                .: {}
+                f:create: {}
+                f:pspAnnotations: {}
+                f:pspEnabled: {}
+                f:userRoles:
+                  .: {}
+                  f:aggregateToDefaultRoles: {}
+                  f:create: {}
+            f:grafana:
+              .: {}
+              f:additionalDataSources: {}
+              f:admin:
+                .: {}
+                f:existingSecret: {}
+                f:passwordKey: {}
+                f:userKey: {}
+              f:adminPassword: {}
+              f:adminUser: {}
+              f:affinity: {}
+              f:dashboardProviders: {}
+              f:dashboards: {}
+              f:dashboardsConfigMaps: {}
+              f:datasources: {}
+              f:defaultDashboardsEnabled: {}
+              f:deploymentStrategy:
+                .: {}
+                f:type: {}
+              f:downloadDashboards:
+                .: {}
+                f:env: {}
+                f:resources: {}
+              f:downloadDashboardsImage:
+                .: {}
+                f:pullPolicy: {}
+                f:repository: {}
+                f:sha: {}
+                f:tag: {}
+              f:enabled: {}
+              f:env: {}
+              f:envFromSecret: {}
+              f:envRenderSecret: {}
+              f:envValueFrom: {}
+              f:extraConfigmapMounts: {}
+              f:extraContainerVolumes: {}
+              f:extraContainers: {}
+              f:extraEmptyDirMounts: {}
+              f:extraExposePorts: {}
+              f:extraInitContainers: {}
+              f:extraSecretMounts: {}
+              f:extraVolumeMounts: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:grafana.ini:
+                .: {}
+                f:analytics:
+                  .: {}
+                  f:check_for_updates: {}
+                f:auth:
+                  .: {}
+                  f:disable_login_form: {}
+                f:auth.anonymous:
+                  .: {}
+                  f:enabled: {}
+                  f:org_role: {}
+                f:auth.basic:
+                  .: {}
+                  f:enabled: {}
+                f:dashboards:
+                  .: {}
+                  f:default_home_dashboard_path: {}
+                f:grafana_net:
+                  .: {}
+                  f:url: {}
+                f:log:
+                  .: {}
+                  f:mode: {}
+                f:paths:
+                  .: {}
+                  f:data: {}
+                  f:logs: {}
+                  f:plugins: {}
+                  f:provisioning: {}
+                f:users:
+                  .: {}
+                  f:auto_assign_org_role: {}
+              f:hostAliases: {}
+              f:image:
+                .: {}
+                f:pullPolicy: {}
+                f:repository: {}
+                f:sha: {}
+                f:tag: {}
+              f:ingress:
+                .: {}
+                f:annotations: {}
+                f:enabled: {}
+                f:extraPaths: {}
+                f:hosts: {}
+                f:labels: {}
+                f:path: {}
+                f:tls: {}
+              f:initChownData:
+                .: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:sha: {}
+                  f:tag: {}
+                f:resources: {}
+              f:ldap:
+                .: {}
+                f:config: {}
+                f:enabled: {}
+                f:existingSecret: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                f:initialDelaySeconds: {}
+                f:timeoutSeconds: {}
+              f:namespaceOverride: {}
+              f:nodeSelector: {}
+              f:notifiers: {}
+              f:persistence:
+                .: {}
+                f:accessModes: {}
+                f:enabled: {}
+                f:finalizers: {}
+                f:size: {}
+                f:type: {}
+              f:plugins: {}
+              f:podDisruptionBudget: {}
+              f:podPortName: {}
+              f:proxy:
+                .: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+              f:rbac:
+                .: {}
+                f:create: {}
+                f:extraClusterRoleRules: {}
+                f:extraRoleRules: {}
+                f:namespaced: {}
+                f:pspAnnotations: {}
+                f:pspEnabled: {}
+              f:readinessProbe:
+                .: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+              f:replicas: {}
+              f:resources:
+                .: {}
+                f:limits:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:fsGroup: {}
+                f:runAsGroup: {}
+                f:runAsNonRoot: {}
+                f:runAsUser: {}
+              f:service:
+                .: {}
+                f:annotations: {}
+                f:labels: {}
+                f:nodePort: {}
+                f:port: {}
+                f:portName: {}
+                f:targetPort: {}
+                f:type: {}
+              f:serviceAccount:
+                .: {}
+                f:create: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+                f:interval: {}
+                f:labels: {}
+                f:metricRelabelings: {}
+                f:path: {}
+                f:relabelings: {}
+                f:scrapeTimeout: {}
+                f:selfMonitor: {}
+              f:sidecar:
+                .: {}
+                f:dashboards:
+                  .: {}
+                  f:SCProvider: {}
+                  f:annotations: {}
+                  f:defaultFolderName: {}
+                  f:enabled: {}
+                  f:folder: {}
+                  f:label: {}
+                  f:provider:
+                    .: {}
+                    f:allowUiUpdates: {}
+                    f:disableDelete: {}
+                    f:folder: {}
+                    f:name: {}
+                    f:orgid: {}
+                    f:type: {}
+                  f:searchNamespace: {}
+                f:datasources:
+                  .: {}
+                  f:annotations: {}
+                  f:createPrometheusReplicasDatasources: {}
+                  f:defaultDatasourceEnabled: {}
+                  f:enabled: {}
+                  f:label: {}
+                  f:searchNamespace: {}
+                f:enableUniqueFilenames: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:sha: {}
+                  f:tag: {}
+                f:imagePullPolicy: {}
+                f:notifiers:
+                  .: {}
+                  f:enabled: {}
+                  f:label: {}
+                f:resources: {}
+              f:smtp:
+                .: {}
+                f:existingSecret: {}
+                f:passwordKey: {}
+                f:userKey: {}
+              f:testFramework:
+                .: {}
+                f:enabled: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:securityContext:
+                  .: {}
+                  f:runAsNonRoot: {}
+                  f:runAsUser: {}
+                f:tag: {}
+              f:tolerations: {}
+            f:k3sServer:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+            f:kube-state-metrics:
+              .: {}
+              f:affinity: {}
+              f:autosharding:
+                .: {}
+                f:enabled: {}
+              f:collectors:
+                .: {}
+                f:certificatesigningrequests: {}
+                f:configmaps: {}
+                f:cronjobs: {}
+                f:daemonsets: {}
+                f:deployments: {}
+                f:endpoints: {}
+                f:horizontalpodautoscalers: {}
+                f:ingresses: {}
+                f:jobs: {}
+                f:limitranges: {}
+                f:mutatingwebhookconfigurations: {}
+                f:namespaces: {}
+                f:networkpolicies: {}
+                f:nodes: {}
+                f:persistentvolumeclaims: {}
+                f:persistentvolumes: {}
+                f:poddisruptionbudgets: {}
+                f:pods: {}
+                f:replicasets: {}
+                f:replicationcontrollers: {}
+                f:resourcequotas: {}
+                f:secrets: {}
+                f:services: {}
+                f:statefulsets: {}
+                f:storageclasses: {}
+                f:validatingwebhookconfigurations: {}
+                f:verticalpodautoscalers: {}
+                f:volumeattachments: {}
+              f:customLabels: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:hostNetwork: {}
+              f:image:
+                .: {}
+                f:pullPolicy: {}
+                f:repository: {}
+                f:tag: {}
+              f:imagePullSecrets: {}
+              f:kubeTargetVersionOverride: {}
+              f:namespaceOverride: {}
+              f:nodeSelector: {}
+              f:podAnnotations: {}
+              f:podDisruptionBudget: {}
+              f:podSecurityPolicy:
+                .: {}
+                f:additionalVolumes: {}
+                f:annotations: {}
+                f:enabled: {}
+              f:prometheus:
+                .: {}
+                f:monitor:
+                  .: {}
+                  f:additionalLabels: {}
+                  f:enabled: {}
+                  f:honorLabels: {}
+                  f:namespace: {}
+              f:prometheusScrape: {}
+              f:rbac:
+                .: {}
+                f:create: {}
+              f:replicas: {}
+              f:resources:
+                .: {}
+                f:limits:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:enabled: {}
+                f:fsGroup: {}
+                f:runAsGroup: {}
+                f:runAsNonRoot: {}
+                f:runAsUser: {}
+              f:service:
+                .: {}
+                f:annotations: {}
+                f:loadBalancerIP: {}
+                f:nodePort: {}
+                f:port: {}
+                f:type: {}
+              f:serviceAccount:
+                .: {}
+                f:annotations: {}
+                f:create: {}
+                f:imagePullSecrets: {}
+              f:tolerations: {}
+            f:kubeAdmControllerManager:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector:
+                  .: {}
+                  f:node-role.kubernetes.io/master: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+            f:kubeAdmEtcd:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector:
+                  .: {}
+                  f:node-role.kubernetes.io/master: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+            f:kubeAdmProxy:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+            f:kubeAdmScheduler:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector:
+                  .: {}
+                  f:node-role.kubernetes.io/master: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+            f:kubeApiServer:
+              .: {}
+              f:enabled: {}
+              f:relabelings: {}
+              f:serviceMonitor:
+                .: {}
+                f:interval: {}
+                f:jobLabel: {}
+                f:metricRelabelings: {}
+                f:selector:
+                  .: {}
+                  f:matchLabels:
+                    .: {}
+                    f:component: {}
+                    f:provider: {}
+              f:tlsConfig:
+                .: {}
+                f:insecureSkipVerify: {}
+                f:serverName: {}
+            f:kubeControllerManager:
+              .: {}
+              f:enabled: {}
+              f:endpoints: {}
+              f:service:
+                .: {}
+                f:port: {}
+                f:targetPort: {}
+              f:serviceMonitor:
+                .: {}
+                f:https: {}
+                f:insecureSkipVerify: {}
+                f:interval: {}
+                f:metricRelabelings: {}
+                f:relabelings: {}
+                f:serverName: {}
+            f:kubeDns:
+              .: {}
+              f:enabled: {}
+              f:service:
+                .: {}
+                f:dnsmasq:
+                  .: {}
+                  f:port: {}
+                  f:targetPort: {}
+                f:skydns:
+                  .: {}
+                  f:port: {}
+                  f:targetPort: {}
+              f:serviceMonitor:
+                .: {}
+                f:dnsmasqMetricRelabelings: {}
+                f:dnsmasqRelabelings: {}
+                f:interval: {}
+                f:metricRelabelings: {}
+                f:relabelings: {}
+            f:kubeEtcd:
+              .: {}
+              f:enabled: {}
+              f:endpoints: {}
+              f:service:
+                .: {}
+                f:port: {}
+                f:targetPort: {}
+              f:serviceMonitor:
+                .: {}
+                f:caFile: {}
+                f:certFile: {}
+                f:insecureSkipVerify: {}
+                f:interval: {}
+                f:keyFile: {}
+                f:metricRelabelings: {}
+                f:relabelings: {}
+                f:scheme: {}
+                f:serverName: {}
+            f:kubeProxy:
+              .: {}
+              f:enabled: {}
+              f:endpoints: {}
+              f:service:
+                .: {}
+                f:port: {}
+                f:targetPort: {}
+              f:serviceMonitor:
+                .: {}
+                f:https: {}
+                f:interval: {}
+                f:metricRelabelings: {}
+                f:relabelings: {}
+            f:kubeScheduler:
+              .: {}
+              f:enabled: {}
+              f:endpoints: {}
+              f:service:
+                .: {}
+                f:port: {}
+                f:targetPort: {}
+              f:serviceMonitor:
+                .: {}
+                f:https: {}
+                f:insecureSkipVerify: {}
+                f:interval: {}
+                f:metricRelabelings: {}
+                f:relabelings: {}
+                f:serverName: {}
+            f:kubeStateMetrics:
+              .: {}
+              f:enabled: {}
+              f:serviceMonitor:
+                .: {}
+                f:interval: {}
+                f:metricRelabelings: {}
+                f:relabelings: {}
+            f:kubeTargetVersionOverride: {}
+            f:kubelet:
+              .: {}
+              f:enabled: {}
+              f:namespace: {}
+              f:serviceMonitor:
+                .: {}
+                f:cAdvisor: {}
+                f:cAdvisorMetricRelabelings: {}
+                f:cAdvisorRelabelings: {}
+                f:https: {}
+                f:interval: {}
+                f:metricRelabelings: {}
+                f:probes: {}
+                f:probesMetricRelabelings: {}
+                f:probesRelabelings: {}
+                f:relabelings: {}
+                f:resource: {}
+                f:resourcePath: {}
+                f:resourceRelabelings: {}
+            f:nameOverride: {}
+            f:namespaceOverride: {}
+            f:nodeExporter:
+              .: {}
+              f:enabled: {}
+              f:jobLabel: {}
+              f:serviceMonitor:
+                .: {}
+                f:interval: {}
+                f:metricRelabelings: {}
+                f:relabelings: {}
+                f:scrapeTimeout: {}
+            f:prometheus:
+              .: {}
+              f:additionalPodMonitors: {}
+              f:additionalServiceMonitors: {}
+              f:annotations: {}
+              f:enabled: {}
+              f:ingress:
+                .: {}
+                f:annotations: {}
+                f:enabled: {}
+                f:hosts: {}
+                f:labels: {}
+                f:paths: {}
+                f:tls: {}
+              f:ingressPerReplica:
+                .: {}
+                f:annotations: {}
+                f:enabled: {}
+                f:hostDomain: {}
+                f:hostPrefix: {}
+                f:labels: {}
+                f:paths: {}
+                f:tlsSecretName: {}
+                f:tlsSecretPerReplica:
+                  .: {}
+                  f:enabled: {}
+                  f:prefix: {}
+              f:podDisruptionBudget:
+                .: {}
+                f:enabled: {}
+                f:maxUnavailable: {}
+                f:minAvailable: {}
+              f:podSecurityPolicy:
+                .: {}
+                f:allowedCapabilities: {}
+              f:prometheusSpec:
+                .: {}
+                f:additionalAlertManagerConfigs: {}
+                f:additionalAlertRelabelConfigs: {}
+                f:additionalPrometheusSecretsAnnotations: {}
+                f:additionalScrapeConfigs: {}
+                f:additionalScrapeConfigsSecret: {}
+                f:affinity: {}
+                f:alertingEndpoints: {}
+                f:apiserverConfig: {}
+                f:configMaps: {}
+                f:containers: {}
+                f:disableCompaction: {}
+                f:enableAdminAPI: {}
+                f:evaluationInterval: {}
+                f:externalLabels: {}
+                f:externalUrl: {}
+                f:ignoreNamespaceSelectors: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:sha: {}
+                  f:tag: {}
+                f:initContainers: {}
+                f:listenLocal: {}
+                f:logFormat: {}
+                f:logLevel: {}
+                f:nodeSelector: {}
+                f:paused: {}
+                f:podAntiAffinity: {}
+                f:podAntiAffinityTopologyKey: {}
+                f:podMetadata: {}
+                f:podMonitorNamespaceSelector: {}
+                f:podMonitorSelector: {}
+                f:podMonitorSelectorNilUsesHelmValues: {}
+                f:portName: {}
+                f:priorityClassName: {}
+                f:prometheusExternalLabelName: {}
+                f:prometheusExternalLabelNameClear: {}
+                f:proxy:
+                  .: {}
+                  f:image:
+                    .: {}
+                    f:repository: {}
+                    f:tag: {}
+                f:query: {}
+                f:remoteRead: {}
+                f:remoteWrite: {}
+                f:remoteWriteDashboards: {}
+                f:replicaExternalLabelName: {}
+                f:replicaExternalLabelNameClear: {}
+                f:replicas: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:retention: {}
+                f:retentionSize: {}
+                f:routePrefix: {}
+                f:ruleNamespaceSelector: {}
+                f:ruleSelector: {}
+                f:ruleSelectorNilUsesHelmValues: {}
+                f:scrapeInterval: {}
+                f:secrets: {}
+                f:securityContext:
+                  .: {}
+                  f:fsGroup: {}
+                  f:runAsGroup: {}
+                  f:runAsNonRoot: {}
+                  f:runAsUser: {}
+                f:serviceMonitorNamespaceSelector: {}
+                f:serviceMonitorSelector: {}
+                f:serviceMonitorSelectorNilUsesHelmValues: {}
+                f:storageSpec: {}
+                f:thanos: {}
+                f:tolerations: {}
+                f:volumeMounts: {}
+                f:volumes: {}
+                f:walCompression: {}
+              f:service:
+                .: {}
+                f:annotations: {}
+                f:clusterIP: {}
+                f:externalIPs: {}
+                f:labels: {}
+                f:loadBalancerIP: {}
+                f:loadBalancerSourceRanges: {}
+                f:nodePort: {}
+                f:port: {}
+                f:sessionAffinity: {}
+                f:targetPort: {}
+                f:type: {}
+              f:serviceAccount:
+                .: {}
+                f:create: {}
+                f:name: {}
+              f:serviceMonitor:
+                .: {}
+                f:bearerTokenFile: {}
+                f:interval: {}
+                f:metricRelabelings: {}
+                f:relabelings: {}
+                f:scheme: {}
+                f:selfMonitor: {}
+                f:tlsConfig: {}
+              f:servicePerReplica:
+                .: {}
+                f:annotations: {}
+                f:enabled: {}
+                f:loadBalancerSourceRanges: {}
+                f:nodePort: {}
+                f:port: {}
+                f:targetPort: {}
+                f:type: {}
+              f:thanosIngress:
+                .: {}
+                f:annotations: {}
+                f:enabled: {}
+                f:hosts: {}
+                f:labels: {}
+                f:paths: {}
+                f:servicePort: {}
+                f:tls: {}
+            f:prometheus-adapter:
+              .: {}
+              f:affinity: {}
+              f:enabled: {}
+              f:extraVolumeMounts: {}
+              f:extraVolumes: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:hostNetwork:
+                .: {}
+                f:enabled: {}
+              f:image:
+                .: {}
+                f:pullPolicy: {}
+                f:pullSecrets: {}
+                f:repository: {}
+                f:tag: {}
+              f:listenPort: {}
+              f:logLevel: {}
+              f:metricsRelistInterval: {}
+              f:nodeSelector: {}
+              f:podAnnotations: {}
+              f:podLabels: {}
+              f:priorityClassName: {}
+              f:prometheus:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:url: {}
+              f:rbac:
+                .: {}
+                f:create: {}
+              f:replicas: {}
+              f:resources: {}
+              f:rules:
+                .: {}
+                f:custom: {}
+                f:default: {}
+                f:external: {}
+                f:resource: {}
+              f:securityContext:
+                .: {}
+                f:runAsNonRoot: {}
+                f:runAsUser: {}
+              f:service:
+                .: {}
+                f:annotations: {}
+                f:port: {}
+                f:type: {}
+              f:serviceAccount:
+                .: {}
+                f:create: {}
+              f:tls:
+                .: {}
+                f:ca: {}
+                f:certificate: {}
+                f:enable: {}
+                f:key: {}
+              f:tolerations: {}
+            f:prometheus-node-exporter:
+              .: {}
+              f:affinity: {}
+              f:configmaps: {}
+              f:endpoints: {}
+              f:extraArgs: {}
+              f:extraHostVolumeMounts: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:hostNetwork: {}
+              f:image:
+                .: {}
+                f:pullPolicy: {}
+                f:repository: {}
+                f:tag: {}
+              f:namespaceOverride: {}
+              f:nodeSelector: {}
+              f:podAnnotations: {}
+              f:podLabels:
+                .: {}
+                f:jobLabel: {}
+              f:prometheus:
+                .: {}
+                f:monitor:
+                  .: {}
+                  f:additionalLabels: {}
+                  f:enabled: {}
+                  f:namespace: {}
+                  f:relabelings: {}
+                  f:scrapeTimeout: {}
+              f:rbac:
+                .: {}
+                f:create: {}
+                f:pspEnabled: {}
+              f:resources:
+                .: {}
+                f:limits:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:fsGroup: {}
+                f:runAsGroup: {}
+                f:runAsNonRoot: {}
+                f:runAsUser: {}
+              f:service:
+                .: {}
+                f:annotations:
+                  .: {}
+                  f:prometheus.io/scrape: {}
+                f:listenOnAllInterfaces: {}
+                f:nodePort: {}
+                f:port: {}
+                f:targetPort: {}
+                f:type: {}
+              f:serviceAccount:
+                .: {}
+                f:create: {}
+                f:imagePullSecrets: {}
+              f:sidecarVolumeMount: {}
+              f:sidecars: {}
+              f:tolerations: {}
+              f:updateStrategy:
+                .: {}
+                f:rollingUpdate:
+                  .: {}
+                  f:maxUnavailable: {}
+                f:type: {}
+            f:prometheusOperator:
+              .: {}
+              f:admissionWebhooks:
+                .: {}
+                f:enabled: {}
+                f:failurePolicy: {}
+                f:patch:
+                  .: {}
+                  f:affinity: {}
+                  f:enabled: {}
+                  f:image:
+                    .: {}
+                    f:pullPolicy: {}
+                    f:repository: {}
+                    f:sha: {}
+                    f:tag: {}
+                  f:nodeSelector: {}
+                  f:podAnnotations: {}
+                  f:priorityClassName: {}
+                  f:resources: {}
+                  f:tolerations: {}
+              f:affinity: {}
+              f:cleanupCustomResource: {}
+              f:configReloaderCpu: {}
+              f:configReloaderMemory: {}
+              f:configmapReloadImage:
+                .: {}
+                f:repository: {}
+                f:sha: {}
+                f:tag: {}
+              f:createCustomResource: {}
+              f:denyNamespaces: {}
+              f:enabled: {}
+              f:hostNetwork: {}
+              f:image:
+                .: {}
+                f:pullPolicy: {}
+                f:repository: {}
+                f:sha: {}
+                f:tag: {}
+              f:kubeletService:
+                .: {}
+                f:enabled: {}
+                f:namespace: {}
+              f:manageCrds: {}
+              f:namespaces: {}
+              f:nodeSelector: {}
+              f:podAnnotations: {}
+              f:podLabels: {}
+              f:prometheusConfigReloaderImage:
+                .: {}
+                f:repository: {}
+                f:sha: {}
+                f:tag: {}
+              f:resources:
+                .: {}
+                f:limits:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:secretFieldSelector: {}
+              f:securityContext:
+                .: {}
+                f:fsGroup: {}
+                f:runAsGroup: {}
+                f:runAsNonRoot: {}
+                f:runAsUser: {}
+              f:service:
+                .: {}
+                f:additionalPorts: {}
+                f:annotations: {}
+                f:clusterIP: {}
+                f:externalIPs: {}
+                f:labels: {}
+                f:loadBalancerIP: {}
+                f:loadBalancerSourceRanges: {}
+                f:nodePort: {}
+                f:nodePortTls: {}
+                f:type: {}
+              f:serviceAccount:
+                .: {}
+                f:create: {}
+                f:name: {}
+              f:serviceMonitor:
+                .: {}
+                f:interval: {}
+                f:metricRelabelings: {}
+                f:relabelings: {}
+                f:scrapeTimeout: {}
+                f:selfMonitor: {}
+              f:tlsProxy:
+                .: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:sha: {}
+                  f:tag: {}
+                f:resources: {}
+              f:tolerations: {}
+            f:rke2ControllerManager:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector:
+                  .: {}
+                  f:node-role.kubernetes.io/master: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+            f:rke2Etcd:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector:
+                  .: {}
+                  f:node-role.kubernetes.io/etcd: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+            f:rke2Proxy:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+              f:tolerations: {}
+            f:rke2Scheduler:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector:
+                  .: {}
+                  f:node-role.kubernetes.io/master: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+            f:rkeControllerManager:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector:
+                  .: {}
+                  f:node-role.kubernetes.io/controlplane: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+            f:rkeEtcd:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector:
+                  .: {}
+                  f:node-role.kubernetes.io/etcd: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+            f:rkeProxy:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+            f:rkeScheduler:
+              .: {}
+              f:clients:
+                .: {}
+                f:command: {}
+                f:copyCertsImage:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:enabled: {}
+                f:https:
+                  .: {}
+                  f:caCertFile: {}
+                  f:certDir: {}
+                  f:certFile: {}
+                  f:enabled: {}
+                  f:insecureSkipVerify: {}
+                  f:keyFile: {}
+                  f:useServiceAccountCredentials: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector:
+                  .: {}
+                  f:node-role.kubernetes.io/controlplane: {}
+                f:port: {}
+                f:proxyUrl: {}
+                f:resources: {}
+                f:tolerations: {}
+                f:useLocalhost: {}
+              f:component: {}
+              f:enabled: {}
+              f:global:
+                .: {}
+                f:cattle:
+                  .: {}
+                  f:clusterId: {}
+                  f:clusterName: {}
+                  f:systemDefaultRegistry: {}
+                f:imagePullSecrets: {}
+                f:kubectl:
+                  .: {}
+                  f:pullPolicy: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:rbac:
+                  .: {}
+                  f:create: {}
+                  f:pspAnnotations: {}
+                  f:pspEnabled: {}
+                  f:userRoles:
+                    .: {}
+                    f:aggregateToDefaultRoles: {}
+                    f:create: {}
+                f:systemDefaultRegistry: {}
+              f:metricsPort: {}
+              f:proxy:
+                .: {}
+                f:command: {}
+                f:enabled: {}
+                f:image:
+                  .: {}
+                  f:repository: {}
+                  f:tag: {}
+                f:nodeSelector: {}
+                f:port: {}
+                f:resources: {}
+                f:tolerations: {}
+              f:serviceMonitor:
+                .: {}
+                f:enabled: {}
+        f:helmVersion: {}
+        f:info:
+          .: {}
+          f:description: {}
+          f:firstDeployed: {}
+          f:lastDeployed: {}
+          f:notes: {}
+          f:readme: {}
+          f:status: {}
+        f:name: {}
+        f:namespace: {}
+        f:resources: {}
+        f:values:
+          .: {}
+          f:alertmanager:
+            .: {}
+            f:alertmanagerSpec:
+              .: {}
+              f:configSecret: {}
+              f:useExistingSecret: {}
+          f:global:
+            .: {}
+            f:cattle:
+              .: {}
+              f:clusterId: {}
+              f:clusterName: {}
+              f:systemDefaultRegistry: {}
+            f:systemDefaultRegistry: {}
+          f:prometheus:
+            .: {}
+            f:prometheusSpec:
+              .: {}
+              f:evaluationInterval: {}
+              f:retentionSize: {}
+              f:scrapeInterval: {}
+          f:prometheusOperator:
+            .: {}
+            f:hostNetwork: {}
+        f:version: {}
+      f:status:
+        .: {}
+        f:observedGeneration: {}
+        f:summary:
+          .: {}
+          f:state: {}
+    manager: rancher
+    operation: Update
+    time: "2020-11-26T22:24:46Z"
+  name: rancher-monitoring
+  namespace: cattle-monitoring-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: false
+    controller: true
+    kind: Secret
+    name: sh.helm.release.v1.rancher-monitoring.v1
+    uid: f3a072f2-3319-48e1-92e3-f9e0a200968a
+  resourceVersion: "952492"
+  selfLink: /apis/catalog.cattle.io/v1/namespaces/cattle-monitoring-system/apps/rancher-monitoring
+  uid: 1423957f-b0bb-4553-abb0-2be6294578ee
+spec:
+  chart:
+    metadata:
+      annotations:
+        artifacthub.io/links: |
+          - name: Chart Source
+            url: https://github.com/prometheus-community/helm-charts
+          - name: Upstream Project
+            url: https://github.com/prometheus-operator/kube-prometheus
+        artifacthub.io/operator: "true"
+        catalog.cattle.io/auto-install: rancher-monitoring-crd=match
+        catalog.cattle.io/certified: rancher
+        catalog.cattle.io/display-name: Monitoring
+        catalog.cattle.io/namespace: cattle-monitoring-system
+        catalog.cattle.io/provides-gvr: monitoring.coreos.com.prometheus/v1
+        catalog.cattle.io/release-name: rancher-monitoring
+        catalog.cattle.io/ui-component: monitoring
+        catalog.cattle.io/ui-source-repo: rancher-charts
+        catalog.cattle.io/ui-source-repo-type: cluster
+      apiVersion: v1
+      appVersion: 0.38.1
+      description: Collects several related Helm charts, Grafana dashboards, and Prometheus
+        rules combined with documentation and scripts to provide easy to operate end-to-end
+        Kubernetes cluster monitoring with Prometheus using the Prometheus Operator.
+      home: https://github.com/prometheus-operator/kube-prometheus
+      icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+      keywords:
+      - operator
+      - prometheus
+      - kube-prometheus
+      - monitoring
+      maintainers:
+      - name: vsliouniaev
+      - name: bismarck
+      - email: gianrubio@gmail.com
+        name: gianrubio
+      - email: github.gkarthiks@gmail.com
+        name: gkarthiks
+      - email: scott@r6by.com
+        name: scottrigby
+      - email: miroslav.hadzhiev@gmail.com
+        name: Xtigyro
+      name: rancher-monitoring
+      sources:
+      - https://github.com/prometheus-community/helm-charts
+      - https://github.com/prometheus-operator/kube-prometheus
+      version: 9.4.201
+    values:
+      additionalPrometheusRules: null
+      alertmanager:
+        alertmanagerSpec:
+          additionalPeers: null
+          affinity: {}
+          configMaps: null
+          containers: null
+          externalUrl: null
+          image:
+            repository: rancher/prom-alertmanager
+            sha: ""
+            tag: v0.21.0
+          listenLocal: false
+          logFormat: logfmt
+          logLevel: info
+          nodeSelector: {}
+          paused: false
+          podAntiAffinity: ""
+          podAntiAffinityTopologyKey: kubernetes.io/hostname
+          podMetadata: {}
+          portName: web
+          priorityClassName: ""
+          replicas: 1
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 500Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          retention: 120h
+          routePrefix: /
+          secrets: null
+          securityContext:
+            fsGroup: 2000
+            runAsGroup: 2000
+            runAsNonRoot: true
+            runAsUser: 1000
+          storage: {}
+          tolerations: null
+          useExistingSecret: false
+        apiVersion: v2
+        config:
+          global:
+            resolve_timeout: 5m
+          receivers:
+          - name: "null"
+          route:
+            group_by:
+            - job
+            group_interval: 5m
+            group_wait: 30s
+            receiver: "null"
+            repeat_interval: 12h
+            routes:
+            - match:
+                alertname: Watchdog
+              receiver: "null"
+          templates:
+          - /etc/alertmanager/config/*.tmpl
+        enabled: true
+        ingress:
+          annotations: {}
+          enabled: false
+          hosts: null
+          labels: {}
+          paths: null
+          tls: null
+        ingressPerReplica:
+          annotations: {}
+          enabled: false
+          hostDomain: ""
+          hostPrefix: ""
+          labels: {}
+          paths: null
+          tlsSecretName: ""
+          tlsSecretPerReplica:
+            enabled: false
+            prefix: alertmanager
+        podDisruptionBudget:
+          enabled: false
+          maxUnavailable: ""
+          minAvailable: 1
+        secret:
+          annotations: {}
+          cleanupOnUninstall: false
+          image:
+            pullPolicy: IfNotPresent
+            repository: rancher/rancher-agent
+            tag: v2.4.8
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+        service:
+          annotations: {}
+          clusterIP: ""
+          externalIPs: null
+          labels: {}
+          loadBalancerIP: ""
+          loadBalancerSourceRanges: null
+          nodePort: 30903
+          port: 9093
+          targetPort: 9093
+          type: ClusterIP
+        serviceAccount:
+          annotations: {}
+          create: true
+          name: ""
+        serviceMonitor:
+          interval: ""
+          metricRelabelings: null
+          relabelings: null
+          selfMonitor: true
+        servicePerReplica:
+          annotations: {}
+          enabled: false
+          loadBalancerSourceRanges: null
+          nodePort: 30904
+          port: 9093
+          targetPort: 9093
+          type: ClusterIP
+        templateFiles:
+          rancher_defaults.tmpl: |-
+            {{- define "slack.rancher.text" -}}
+            {{ template "rancher.text_multiple" . }}
+            {{- end -}}
+
+            {{- define "rancher.text_multiple" -}}
+            *[GROUP - Details]*
+            One or more alarms in this group have triggered a notification.
+
+            {{- if gt (len .GroupLabels.Values) 0 }}
+            *Group Labels:*
+              {{- range .GroupLabels.SortedPairs }}
+              • *{{ .Name }}:* `{{ .Value }}`
+              {{- end }}
+            {{- end }}
+            {{- if .ExternalURL }}
+            *Link to AlertManager:* {{ .ExternalURL }}
+            {{- end }}
+
+            {{- range .Alerts }}
+            {{ template "rancher.text_single" . }}
+            {{- end }}
+            {{- end -}}
+
+            {{- define "rancher.text_single" -}}
+            {{- if .Labels.alertname }}
+            *[ALERT - {{ .Labels.alertname }}]*
+            {{- else }}
+            *[ALERT]*
+            {{- end }}
+            {{- if .Labels.severity }}
+            *Severity:* `{{ .Labels.severity }}`
+            {{- end }}
+            {{- if .Labels.cluster }}
+            *Cluster:*  {{ .Labels.cluster }}
+            {{- end }}
+            {{- if .Annotations.summary }}
+            *Summary:* {{ .Annotations.summary }}
+            {{- end }}
+            {{- if .Annotations.message }}
+            *Message:* {{ .Annotations.message }}
+            {{- end }}
+            {{- if .Annotations.description }}
+            *Description:* {{ .Annotations.description }}
+            {{- end }}
+            {{- if .Annotations.runbook_url }}
+            *Runbook URL:* <{{ .Annotations.runbook_url }}|:spiral_note_pad:>
+            {{- end }}
+            {{- with .Labels }}
+            {{- with .Remove (stringSlice "alertname" "severity" "cluster") }}
+            {{- if gt (len .) 0 }}
+            *Additional Labels:*
+              {{- range .SortedPairs }}
+              • *{{ .Name }}:* `{{ .Value }}`
+              {{- end }}
+            {{- end }}
+            {{- end }}
+            {{- end }}
+            {{- with .Annotations }}
+            {{- with .Remove (stringSlice "summary" "message" "description" "runbook_url") }}
+            {{- if gt (len .) 0 }}
+            *Additional Annotations:*
+              {{- range .SortedPairs }}
+              • *{{ .Name }}:* `{{ .Value }}`
+              {{- end }}
+            {{- end }}
+            {{- end }}
+            {{- end }}
+            {{- end -}}
+        tplConfig: false
+      commonLabels: {}
+      coreDns:
+        enabled: true
+        service:
+          port: 9153
+          targetPort: 9153
+        serviceMonitor:
+          interval: ""
+          metricRelabelings: null
+          relabelings: null
+      defaultRules:
+        annotations: {}
+        appNamespacesTarget: .*
+        create: true
+        labels: {}
+        rules:
+          alertmanager: true
+          etcd: true
+          general: true
+          k8s: true
+          kubeApiserver: true
+          kubeApiserverAvailability: true
+          kubeApiserverError: true
+          kubeApiserverSlos: true
+          kubePrometheusGeneral: true
+          kubePrometheusNodeAlerting: true
+          kubePrometheusNodeRecording: true
+          kubeScheduler: true
+          kubeStateMetrics: true
+          kubelet: true
+          kubernetesAbsent: true
+          kubernetesApps: true
+          kubernetesResources: true
+          kubernetesStorage: true
+          kubernetesSystem: true
+          network: true
+          node: true
+          prometheus: true
+          prometheusOperator: true
+          time: true
+        runbookUrl: https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#
+      fullnameOverride: ""
+      global:
+        cattle:
+          systemDefaultRegistry: ""
+        imagePullSecrets: null
+        kubectl:
+          pullPolicy: IfNotPresent
+          repository: rancher/kubectl
+          tag: v1.18.6
+        rbac:
+          create: true
+          pspAnnotations: {}
+          pspEnabled: true
+          userRoles:
+            aggregateToDefaultRoles: true
+            create: true
+      grafana:
+        additionalDataSources: null
+        admin:
+          existingSecret: ""
+          passwordKey: admin-password
+          userKey: admin-user
+        adminPassword: prom-operator
+        adminUser: admin
+        affinity: {}
+        dashboardProviders: {}
+        dashboards: {}
+        dashboardsConfigMaps: {}
+        datasources: {}
+        defaultDashboardsEnabled: true
+        deploymentStrategy:
+          type: Recreate
+        downloadDashboards:
+          env: {}
+          resources: {}
+        downloadDashboardsImage:
+          pullPolicy: IfNotPresent
+          repository: rancher/curlimages-curl
+          sha: ""
+          tag: 7.70.0
+        enabled: true
+        env: {}
+        envFromSecret: ""
+        envRenderSecret: {}
+        envValueFrom: {}
+        extraConfigmapMounts: null
+        extraContainerVolumes:
+        - emptyDir: {}
+          name: nginx-home
+        - configMap:
+            items:
+            - key: nginx.conf
+              mode: 438
+              path: nginx.conf
+            name: grafana-nginx-proxy-config
+          name: grafana-nginx
+        extraContainers: |
+          - name: grafana-proxy
+            args:
+            - nginx
+            - -g
+            - daemon off;
+            - -c
+            - /nginx/nginx.conf
+            image: "{{ template "system_default_registry" . }}{{ .Values.proxy.image.repository }}:{{ .Values.proxy.image.tag }}"
+            ports:
+            - containerPort: 8080
+              name: nginx-http
+              protocol: TCP
+            volumeMounts:
+            - mountPath: /nginx
+              name: grafana-nginx
+            - mountPath: /var/cache/nginx
+              name: nginx-home
+            securityContext:
+              runAsUser: 101
+              runAsGroup: 101
+        extraEmptyDirMounts: null
+        extraExposePorts: null
+        extraInitContainers: null
+        extraSecretMounts: null
+        extraVolumeMounts: null
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        grafana.ini:
+          analytics:
+            check_for_updates: true
+          auth:
+            disable_login_form: false
+          auth.anonymous:
+            enabled: true
+            org_role: Viewer
+          auth.basic:
+            enabled: false
+          dashboards:
+            default_home_dashboard_path: /tmp/dashboards/rancher-default-home.json
+          grafana_net:
+            url: https://grafana.net
+          log:
+            mode: console
+          paths:
+            data: /var/lib/grafana/data
+            logs: /var/log/grafana
+            plugins: /var/lib/grafana/plugins
+            provisioning: /etc/grafana/provisioning
+          users:
+            auto_assign_org_role: Viewer
+        hostAliases: null
+        image:
+          pullPolicy: IfNotPresent
+          repository: rancher/grafana-grafana
+          sha: ""
+          tag: 7.1.5
+        ingress:
+          annotations: {}
+          enabled: false
+          extraPaths: null
+          hosts: null
+          labels: {}
+          path: /
+          tls: null
+        initChownData:
+          enabled: true
+          image:
+            pullPolicy: IfNotPresent
+            repository: rancher/library-busybox
+            sha: ""
+            tag: 1.31.1
+          resources: {}
+        ldap:
+          config: ""
+          enabled: false
+          existingSecret: ""
+        livenessProbe:
+          failureThreshold: 10
+          httpGet:
+            path: /api/health
+            port: 3000
+          initialDelaySeconds: 60
+          timeoutSeconds: 30
+        namespaceOverride: ""
+        nodeSelector: {}
+        notifiers: {}
+        persistence:
+          accessModes:
+          - ReadWriteOnce
+          enabled: false
+          finalizers:
+          - kubernetes.io/pvc-protection
+          size: 10Gi
+          type: pvc
+        plugins: null
+        podDisruptionBudget: {}
+        podPortName: grafana
+        proxy:
+          image:
+            repository: rancher/library-nginx
+            tag: 1.19.2-alpine
+        rbac:
+          create: true
+          extraClusterRoleRules: null
+          extraRoleRules: null
+          namespaced: false
+          pspAnnotations: {}
+          pspEnabled: true
+        readinessProbe:
+          httpGet:
+            path: /api/health
+            port: 3000
+        replicas: 1
+        resources:
+          limits:
+            cpu: 200m
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        securityContext:
+          fsGroup: 472
+          runAsGroup: 472
+          runAsNonRoot: true
+          runAsUser: 472
+        service:
+          annotations: {}
+          labels: {}
+          nodePort: 30950
+          port: 80
+          portName: nginx-http
+          targetPort: 8080
+          type: ClusterIP
+        serviceAccount:
+          create: true
+        serviceMonitor:
+          enabled: false
+          interval: ""
+          labels: {}
+          metricRelabelings: null
+          path: /metrics
+          relabelings: null
+          scrapeTimeout: 30s
+          selfMonitor: true
+        sidecar:
+          dashboards:
+            SCProvider: true
+            annotations: {}
+            defaultFolderName: null
+            enabled: true
+            folder: /tmp/dashboards
+            label: grafana_dashboard
+            provider:
+              allowUiUpdates: false
+              disableDelete: false
+              folder: ""
+              name: sidecarProvider
+              orgid: 1
+              type: file
+            searchNamespace: cattle-dashboards
+          datasources:
+            annotations: {}
+            createPrometheusReplicasDatasources: false
+            defaultDatasourceEnabled: true
+            enabled: true
+            label: grafana_datasource
+            searchNamespace: null
+          enableUniqueFilenames: false
+          image:
+            repository: rancher/kiwigrid-k8s-sidecar
+            sha: ""
+            tag: 0.1.151
+          imagePullPolicy: IfNotPresent
+          notifiers:
+            enabled: false
+            label: grafana_notifier
+          resources: {}
+        smtp:
+          existingSecret: ""
+          passwordKey: password
+          userKey: user
+        testFramework:
+          enabled: true
+          image: rancher/bats-bats
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+          tag: v1.1.0
+        tolerations: null
+      k3sServer:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: false
+            insecureSkipVerify: false
+            keyFile: ""
+            useServiceAccountCredentials: false
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector: {}
+          port: 10013
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoExecute
+            operator: Exists
+          - effect: NoSchedule
+            operator: Exists
+          useLocalhost: true
+        component: k3s-server
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 10249
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+      kube-state-metrics:
+        affinity: {}
+        autosharding:
+          enabled: false
+        collectors:
+          certificatesigningrequests: true
+          configmaps: true
+          cronjobs: true
+          daemonsets: true
+          deployments: true
+          endpoints: true
+          horizontalpodautoscalers: true
+          ingresses: true
+          jobs: true
+          limitranges: true
+          mutatingwebhookconfigurations: true
+          namespaces: true
+          networkpolicies: true
+          nodes: true
+          persistentvolumeclaims: true
+          persistentvolumes: true
+          poddisruptionbudgets: true
+          pods: true
+          replicasets: true
+          replicationcontrollers: true
+          resourcequotas: true
+          secrets: true
+          services: true
+          statefulsets: true
+          storageclasses: true
+          validatingwebhookconfigurations: true
+          verticalpodautoscalers: false
+          volumeattachments: true
+        customLabels: {}
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        hostNetwork: false
+        image:
+          pullPolicy: IfNotPresent
+          repository: rancher/coreos-kube-state-metrics
+          tag: v1.9.7
+        imagePullSecrets: null
+        kubeTargetVersionOverride: ""
+        namespaceOverride: ""
+        nodeSelector: {}
+        podAnnotations: {}
+        podDisruptionBudget: {}
+        podSecurityPolicy:
+          additionalVolumes: null
+          annotations: {}
+          enabled: true
+        prometheus:
+          monitor:
+            additionalLabels: {}
+            enabled: false
+            honorLabels: false
+            namespace: ""
+        prometheusScrape: true
+        rbac:
+          create: true
+        replicas: 1
+        resources:
+          limits:
+            cpu: 100m
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 130Mi
+        securityContext:
+          enabled: true
+          fsGroup: 65534
+          runAsGroup: 65534
+          runAsNonRoot: true
+          runAsUser: 65534
+        service:
+          annotations: {}
+          loadBalancerIP: ""
+          nodePort: 0
+          port: 8080
+          type: ClusterIP
+        serviceAccount:
+          annotations: {}
+          create: true
+          imagePullSecrets: null
+        tolerations: null
+      kubeAdmControllerManager:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: true
+            insecureSkipVerify: true
+            keyFile: ""
+            useServiceAccountCredentials: true
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector:
+            node-role.kubernetes.io/master: ""
+          port: 10011
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoExecute
+            operator: Exists
+          - effect: NoSchedule
+            operator: Exists
+          useLocalhost: true
+        component: kube-controller-manager
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 10257
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+      kubeAdmEtcd:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: false
+            insecureSkipVerify: false
+            keyFile: ""
+            useServiceAccountCredentials: false
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector:
+            node-role.kubernetes.io/master: ""
+          port: 10014
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoExecute
+            operator: Exists
+          - effect: NoSchedule
+            operator: Exists
+          useLocalhost: true
+        component: kube-etcd
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 2381
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+      kubeAdmProxy:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: false
+            insecureSkipVerify: false
+            keyFile: ""
+            useServiceAccountCredentials: false
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector: {}
+          port: 10013
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoExecute
+            operator: Exists
+          - effect: NoSchedule
+            operator: Exists
+          useLocalhost: true
+        component: kube-proxy
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 10249
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+      kubeAdmScheduler:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: true
+            insecureSkipVerify: true
+            keyFile: ""
+            useServiceAccountCredentials: true
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector:
+            node-role.kubernetes.io/master: ""
+          port: 10012
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoExecute
+            operator: Exists
+          - effect: NoSchedule
+            operator: Exists
+          useLocalhost: true
+        component: kube-scheduler
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 10259
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+      kubeApiServer:
+        enabled: true
+        relabelings: null
+        serviceMonitor:
+          interval: ""
+          jobLabel: component
+          metricRelabelings: null
+          selector:
+            matchLabels:
+              component: apiserver
+              provider: kubernetes
+        tlsConfig:
+          insecureSkipVerify: false
+          serverName: kubernetes
+      kubeControllerManager:
+        enabled: false
+        endpoints: null
+        service:
+          port: 10252
+          targetPort: 10252
+        serviceMonitor:
+          https: false
+          insecureSkipVerify: null
+          interval: ""
+          metricRelabelings: null
+          relabelings: null
+          serverName: null
+      kubeDns:
+        enabled: false
+        service:
+          dnsmasq:
+            port: 10054
+            targetPort: 10054
+          skydns:
+            port: 10055
+            targetPort: 10055
+        serviceMonitor:
+          dnsmasqMetricRelabelings: null
+          dnsmasqRelabelings: null
+          interval: ""
+          metricRelabelings: null
+          relabelings: null
+      kubeEtcd:
+        enabled: false
+        endpoints: null
+        service:
+          port: 2379
+          targetPort: 2379
+        serviceMonitor:
+          caFile: ""
+          certFile: ""
+          insecureSkipVerify: false
+          interval: ""
+          keyFile: ""
+          metricRelabelings: null
+          relabelings: null
+          scheme: http
+          serverName: ""
+      kubeProxy:
+        enabled: false
+        endpoints: null
+        service:
+          port: 10249
+          targetPort: 10249
+        serviceMonitor:
+          https: false
+          interval: ""
+          metricRelabelings: null
+          relabelings: null
+      kubeScheduler:
+        enabled: false
+        endpoints: null
+        service:
+          port: 10251
+          targetPort: 10251
+        serviceMonitor:
+          https: false
+          insecureSkipVerify: null
+          interval: ""
+          metricRelabelings: null
+          relabelings: null
+          serverName: null
+      kubeStateMetrics:
+        enabled: true
+        serviceMonitor:
+          interval: ""
+          metricRelabelings: null
+          relabelings: null
+      kubeTargetVersionOverride: ""
+      kubelet:
+        enabled: true
+        namespace: kube-system
+        serviceMonitor:
+          cAdvisor: true
+          cAdvisorMetricRelabelings: null
+          cAdvisorRelabelings:
+          - sourceLabels:
+            - __metrics_path__
+            targetLabel: metrics_path
+          https: true
+          interval: ""
+          metricRelabelings: null
+          probes: true
+          probesMetricRelabelings: null
+          probesRelabelings:
+          - sourceLabels:
+            - __metrics_path__
+            targetLabel: metrics_path
+          relabelings:
+          - sourceLabels:
+            - __metrics_path__
+            targetLabel: metrics_path
+          resource: true
+          resourcePath: /metrics/resource/v1alpha1
+          resourceRelabelings:
+          - sourceLabels:
+            - __metrics_path__
+            targetLabel: metrics_path
+      nameOverride: rancher-monitoring
+      namespaceOverride: cattle-monitoring-system
+      nodeExporter:
+        enabled: true
+        jobLabel: jobLabel
+        serviceMonitor:
+          interval: ""
+          metricRelabelings: null
+          relabelings: null
+          scrapeTimeout: ""
+      prometheus:
+        additionalPodMonitors: null
+        additionalServiceMonitors: null
+        annotations: {}
+        enabled: true
+        ingress:
+          annotations: {}
+          enabled: false
+          hosts: null
+          labels: {}
+          paths: null
+          tls: null
+        ingressPerReplica:
+          annotations: {}
+          enabled: false
+          hostDomain: ""
+          hostPrefix: ""
+          labels: {}
+          paths: null
+          tlsSecretName: ""
+          tlsSecretPerReplica:
+            enabled: false
+            prefix: prometheus
+        podDisruptionBudget:
+          enabled: false
+          maxUnavailable: ""
+          minAvailable: 1
+        podSecurityPolicy:
+          allowedCapabilities: null
+        prometheusSpec:
+          additionalAlertManagerConfigs: null
+          additionalAlertRelabelConfigs: null
+          additionalPrometheusSecretsAnnotations: {}
+          additionalScrapeConfigs: null
+          additionalScrapeConfigsSecret: {}
+          affinity: {}
+          alertingEndpoints: null
+          apiserverConfig: {}
+          configMaps: null
+          containers: |
+            - name: prometheus-proxy
+              args:
+              - nginx
+              - -g
+              - daemon off;
+              - -c
+              - /nginx/nginx.conf
+              image: "{{ template "system_default_registry" . }}{{ .Values.prometheus.prometheusSpec.proxy.image.repository }}:{{ .Values.prometheus.prometheusSpec.proxy.image.tag }}"
+              ports:
+              - containerPort: 8080
+                name: nginx-http
+                protocol: TCP
+              volumeMounts:
+              - mountPath: /nginx
+                name: prometheus-nginx
+              - mountPath: /var/cache/nginx
+                name: nginx-home
+              securityContext:
+                runAsUser: 101
+                runAsGroup: 101
+          disableCompaction: false
+          enableAdminAPI: false
+          evaluationInterval: ""
+          externalLabels: {}
+          externalUrl: ""
+          ignoreNamespaceSelectors: false
+          image:
+            repository: rancher/prom-prometheus
+            sha: ""
+            tag: v2.18.2
+          initContainers: null
+          listenLocal: false
+          logFormat: logfmt
+          logLevel: info
+          nodeSelector: {}
+          paused: false
+          podAntiAffinity: ""
+          podAntiAffinityTopologyKey: kubernetes.io/hostname
+          podMetadata: {}
+          podMonitorNamespaceSelector: {}
+          podMonitorSelector: {}
+          podMonitorSelectorNilUsesHelmValues: false
+          portName: nginx-http
+          priorityClassName: ""
+          prometheusExternalLabelName: ""
+          prometheusExternalLabelNameClear: false
+          proxy:
+            image:
+              repository: rancher/library-nginx
+              tag: 1.19.2-alpine
+          query: {}
+          remoteRead: null
+          remoteWrite: null
+          remoteWriteDashboards: false
+          replicaExternalLabelName: ""
+          replicaExternalLabelNameClear: false
+          replicas: 1
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 1500Mi
+            requests:
+              cpu: 750m
+              memory: 750Mi
+          retention: 10d
+          retentionSize: ""
+          routePrefix: /
+          ruleNamespaceSelector: {}
+          ruleSelector: {}
+          ruleSelectorNilUsesHelmValues: false
+          scrapeInterval: ""
+          secrets: null
+          securityContext:
+            fsGroup: 2000
+            runAsGroup: 2000
+            runAsNonRoot: true
+            runAsUser: 1000
+          serviceMonitorNamespaceSelector: {}
+          serviceMonitorSelector: {}
+          serviceMonitorSelectorNilUsesHelmValues: false
+          storageSpec: {}
+          thanos: {}
+          tolerations: null
+          volumeMounts: null
+          volumes:
+          - emptyDir: {}
+            name: nginx-home
+          - configMap:
+              defaultMode: 438
+              name: prometheus-nginx-proxy-config
+            name: prometheus-nginx
+          walCompression: false
+        service:
+          annotations: {}
+          clusterIP: ""
+          externalIPs: null
+          labels: {}
+          loadBalancerIP: ""
+          loadBalancerSourceRanges: null
+          nodePort: 30090
+          port: 9090
+          sessionAffinity: ""
+          targetPort: 8080
+          type: ClusterIP
+        serviceAccount:
+          create: true
+          name: ""
+        serviceMonitor:
+          bearerTokenFile: null
+          interval: ""
+          metricRelabelings: null
+          relabelings: null
+          scheme: ""
+          selfMonitor: true
+          tlsConfig: {}
+        servicePerReplica:
+          annotations: {}
+          enabled: false
+          loadBalancerSourceRanges: null
+          nodePort: 30091
+          port: 9090
+          targetPort: 9090
+          type: ClusterIP
+        thanosIngress:
+          annotations: {}
+          enabled: false
+          hosts: null
+          labels: {}
+          paths: null
+          servicePort: 10901
+          tls: null
+      prometheus-adapter:
+        affinity: {}
+        enabled: true
+        extraVolumeMounts: null
+        extraVolumes: null
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        hostNetwork:
+          enabled: false
+        image:
+          pullPolicy: IfNotPresent
+          pullSecrets: {}
+          repository: rancher/directxman12-k8s-prometheus-adapter-amd64
+          tag: v0.6.0
+        listenPort: 6443
+        logLevel: 4
+        metricsRelistInterval: 1m
+        nodeSelector: {}
+        podAnnotations: {}
+        podLabels: {}
+        priorityClassName: ""
+        prometheus:
+          path: ""
+          port: 9090
+          url: http://rancher-monitoring-prometheus.cattle-monitoring-system.svc
+        rbac:
+          create: true
+        replicas: 1
+        resources: {}
+        rules:
+          custom: null
+          default: true
+          external: null
+          resource: {}
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 1000
+        service:
+          annotations: {}
+          port: 443
+          type: ClusterIP
+        serviceAccount:
+          create: true
+        tls:
+          ca: '# Public CA file that signed the APIService'
+          certificate: '# Public key of the APIService'
+          enable: false
+          key: '# Private key of the APIService'
+        tolerations: null
+      prometheus-node-exporter:
+        affinity: {}
+        configmaps: null
+        endpoints: null
+        extraArgs:
+        - --collector.filesystem.ignored-mount-points=^/(dev|proc|sys|var/lib/docker/.+)($|/)
+        - --collector.filesystem.ignored-fs-types=^(autofs|binfmt_misc|cgroup|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|mqueue|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|sysfs|tracefs)$
+        extraHostVolumeMounts: null
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        hostNetwork: true
+        image:
+          pullPolicy: IfNotPresent
+          repository: rancher/prom-node-exporter
+          tag: v1.0.1
+        namespaceOverride: ""
+        nodeSelector: {}
+        podAnnotations: {}
+        podLabels:
+          jobLabel: node-exporter
+        prometheus:
+          monitor:
+            additionalLabels: {}
+            enabled: false
+            namespace: ""
+            relabelings: null
+            scrapeTimeout: 10s
+        rbac:
+          create: true
+          pspEnabled: true
+        resources:
+          limits:
+            cpu: 200m
+            memory: 50Mi
+          requests:
+            cpu: 100m
+            memory: 30Mi
+        securityContext:
+          fsGroup: 65534
+          runAsGroup: 65534
+          runAsNonRoot: true
+          runAsUser: 65534
+        service:
+          annotations:
+            prometheus.io/scrape: "true"
+          listenOnAllInterfaces: true
+          nodePort: null
+          port: 9796
+          targetPort: 9796
+          type: ClusterIP
+        serviceAccount:
+          create: true
+          imagePullSecrets: null
+        sidecarVolumeMount: null
+        sidecars: null
+        tolerations:
+        - effect: NoSchedule
+          operator: Exists
+        updateStrategy:
+          rollingUpdate:
+            maxUnavailable: 1
+          type: RollingUpdate
+      prometheusOperator:
+        admissionWebhooks:
+          enabled: true
+          failurePolicy: Fail
+          patch:
+            affinity: {}
+            enabled: true
+            image:
+              pullPolicy: IfNotPresent
+              repository: rancher/jettech-kube-webhook-certgen
+              sha: ""
+              tag: v1.2.1
+            nodeSelector: {}
+            podAnnotations: {}
+            priorityClassName: ""
+            resources: {}
+            tolerations: null
+        affinity: {}
+        cleanupCustomResource: false
+        configReloaderCpu: 100m
+        configReloaderMemory: 25Mi
+        configmapReloadImage:
+          repository: rancher/jimmidyson-configmap-reload
+          sha: ""
+          tag: v0.3.0
+        createCustomResource: true
+        denyNamespaces: null
+        enabled: true
+        hostNetwork: false
+        image:
+          pullPolicy: IfNotPresent
+          repository: rancher/coreos-prometheus-operator
+          sha: ""
+          tag: v0.38.1
+        kubeletService:
+          enabled: true
+          namespace: kube-system
+        manageCrds: true
+        namespaces: {}
+        nodeSelector: {}
+        podAnnotations: {}
+        podLabels: {}
+        prometheusConfigReloaderImage:
+          repository: rancher/coreos-prometheus-config-reloader
+          sha: ""
+          tag: v0.38.1
+        resources:
+          limits:
+            cpu: 200m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        secretFieldSelector: ""
+        securityContext:
+          fsGroup: 65534
+          runAsGroup: 65534
+          runAsNonRoot: true
+          runAsUser: 65534
+        service:
+          additionalPorts: null
+          annotations: {}
+          clusterIP: ""
+          externalIPs: null
+          labels: {}
+          loadBalancerIP: ""
+          loadBalancerSourceRanges: null
+          nodePort: 30080
+          nodePortTls: 30443
+          type: ClusterIP
+        serviceAccount:
+          create: true
+          name: ""
+        serviceMonitor:
+          interval: ""
+          metricRelabelings: null
+          relabelings: null
+          scrapeTimeout: ""
+          selfMonitor: true
+        tlsProxy:
+          enabled: true
+          image:
+            pullPolicy: IfNotPresent
+            repository: rancher/squareup-ghostunnel
+            sha: ""
+            tag: v1.5.2
+          resources: {}
+        tolerations: null
+      rke2ControllerManager:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: false
+            insecureSkipVerify: false
+            keyFile: ""
+            useServiceAccountCredentials: false
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector:
+            node-role.kubernetes.io/master: "true"
+          port: 10011
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoExecute
+            operator: Exists
+          - effect: NoSchedule
+            operator: Exists
+          useLocalhost: true
+        component: kube-controller-manager
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 10252
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+      rke2Etcd:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: false
+            insecureSkipVerify: false
+            keyFile: ""
+            useServiceAccountCredentials: false
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector:
+            node-role.kubernetes.io/etcd: "true"
+          port: 10014
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoSchedule
+            key: node-role.kubernetes.io/master
+            operator: Equal
+          useLocalhost: true
+        component: kube-etcd
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 2381
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+      rke2Proxy:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: false
+            insecureSkipVerify: false
+            keyFile: ""
+            useServiceAccountCredentials: false
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector: {}
+          port: 10013
+          proxyUrl: ""
+          resources: {}
+          tolerations: null
+          useLocalhost: true
+        component: kube-proxy
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 10249
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+        tolerations:
+        - effect: NoExecute
+          operator: Exists
+        - effect: NoSchedule
+          operator: Exists
+      rke2Scheduler:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: false
+            insecureSkipVerify: false
+            keyFile: ""
+            useServiceAccountCredentials: false
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector:
+            node-role.kubernetes.io/master: "true"
+          port: 10012
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoExecute
+            operator: Exists
+          - effect: NoSchedule
+            operator: Exists
+          useLocalhost: true
+        component: kube-scheduler
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 10251
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+      rkeControllerManager:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: false
+            insecureSkipVerify: false
+            keyFile: ""
+            useServiceAccountCredentials: false
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector:
+            node-role.kubernetes.io/controlplane: "true"
+          port: 10011
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoExecute
+            operator: Exists
+          - effect: NoSchedule
+            operator: Exists
+          useLocalhost: true
+        component: kube-controller-manager
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 10252
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+      rkeEtcd:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: kube-ca.pem
+            certDir: /etc/kubernetes/ssl
+            certFile: kube-etcd-*.pem
+            enabled: true
+            insecureSkipVerify: false
+            keyFile: kube-etcd-*-key.pem
+            useServiceAccountCredentials: false
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector:
+            node-role.kubernetes.io/etcd: "true"
+          port: 10014
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoExecute
+            operator: Exists
+          - effect: NoSchedule
+            operator: Exists
+          useLocalhost: false
+        component: kube-etcd
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 2379
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+      rkeProxy:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: false
+            insecureSkipVerify: false
+            keyFile: ""
+            useServiceAccountCredentials: false
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector: {}
+          port: 10013
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoExecute
+            operator: Exists
+          - effect: NoSchedule
+            operator: Exists
+          useLocalhost: true
+        component: kube-proxy
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 10249
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+      rkeScheduler:
+        clients:
+          command:
+          - pushprox-client
+          copyCertsImage:
+            repository: rancher/library-busybox
+            tag: 1.31.1
+          enabled: true
+          https:
+            caCertFile: ""
+            certDir: ""
+            certFile: ""
+            enabled: false
+            insecureSkipVerify: false
+            keyFile: ""
+            useServiceAccountCredentials: false
+          image:
+            repository: rancher/pushprox-client
+            tag: v0.1.0-rancher1-client
+          nodeSelector:
+            node-role.kubernetes.io/controlplane: "true"
+          port: 10012
+          proxyUrl: ""
+          resources: {}
+          tolerations:
+          - effect: NoExecute
+            operator: Exists
+          - effect: NoSchedule
+            operator: Exists
+          useLocalhost: true
+        component: kube-scheduler
+        enabled: false
+        global:
+          cattle:
+            clusterId: local
+            clusterName: local
+            systemDefaultRegistry: ""
+          imagePullSecrets: null
+          kubectl:
+            pullPolicy: IfNotPresent
+            repository: rancher/kubectl
+            tag: v1.18.6
+          rbac:
+            create: true
+            pspAnnotations: {}
+            pspEnabled: true
+            userRoles:
+              aggregateToDefaultRoles: true
+              create: true
+          systemDefaultRegistry: ""
+        metricsPort: 10251
+        proxy:
+          command:
+          - pushprox-proxy
+          enabled: true
+          image:
+            repository: rancher/pushprox-proxy
+            tag: v0.1.0-rancher1-proxy
+          nodeSelector: {}
+          port: 8080
+          resources: {}
+          tolerations: null
+        serviceMonitor:
+          enabled: true
+  helmVersion: 3
+  info:
+    description: Install complete
+    firstDeployed: "2020-11-26T22:17:31Z"
+    lastDeployed: "2020-11-26T22:17:31Z"
+    notes: |
+      rancher-monitoring has been installed. Check its status by running:
+        kubectl --namespace cattle-monitoring-system get pods -l "release=rancher-monitoring"
+
+      Visit https://github.com/prometheus-operator/kube-prometheus for instructions on how to create & configure Alertmanager and Prometheus instances using the Operator.
+    readme: |
+      # kube-prometheus-stack
+
+      Installs the [kube-prometheus stack](https://github.com/prometheus-operator/kube-prometheus), a collection of Kubernetes manifests, [Grafana](http://grafana.com/) dashboards, and [Prometheus rules](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/) combined with documentation and scripts to provide easy to operate end-to-end Kubernetes cluster monitoring with [Prometheus](https://prometheus.io/) using the [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator).
+
+      See the [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus) README for details about components, dashboards, and alerts.
+
+      _Note: This chart was formerly named `prometheus-operator` chart, now renamed to more clearly reflect that it installs the `kube-prometheus` project stack, within which Prometheus Operator is only one component._
+
+      ## Prerequisites
+
+      - Kubernetes 1.10+ with Beta APIs
+      - Helm 2.12+ (If using Helm < 2.14, [see below for CRD workaround](#Helm-fails-to-create-CRDs))
+
+      ## Get Repo Info
+
+      ```console
+      helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+      helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+      helm repo update
+      ```
+
+      _See [helm repo](https://helm.sh/docs/helm/helm_repo/) for command documentation._
+
+      ## Install Chart
+
+      ```console
+      # Helm 3
+      $ helm install [RELEASE_NAME] prometheus-community/kube-prometheus-stack
+
+      # Helm 2
+      $ helm install --name [RELEASE_NAME] prometheus-community/kube-prometheus-stack
+      ```
+
+      _See [configuration](#configuration) below._
+
+      _See [helm install](https://helm.sh/docs/helm/helm_install/) for command documentation._
+
+      ## Dependencies
+
+      By default this chart installs additional, dependent charts:
+
+      - [stable/kube-state-metrics](https://github.com/helm/charts/tree/master/stable/kube-state-metrics)
+      - [stable/prometheus-node-exporter](https://github.com/prometheus-community/helm-charts/tree/main/prometheus-node-exporter)
+      - [grafana/grafana](https://github.com/grafana/helm-charts/tree/main/charts/grafana)
+
+      To disable dependencies during installation, see [multiple releases](#multiple-releases) below.
+
+      _See [helm dependency](https://helm.sh/docs/helm/helm_dependency/) for command documentation._
+
+      ## Uninstall Chart
+
+      ```console
+      # Helm 3
+      $ helm uninstall [RELEASE_NAME]
+
+      # Helm 2
+      # helm delete --purge [RELEASE_NAME]
+      ```
+
+      This removes all the Kubernetes components associated with the chart and deletes the release.
+
+      _See [helm uninstall](https://helm.sh/docs/helm/helm_uninstall/) for command documentation._
+
+      CRDs created by this chart are not removed by default and should be manually cleaned up:
+
+      ```console
+      kubectl delete crd prometheuses.monitoring.coreos.com
+      kubectl delete crd prometheusrules.monitoring.coreos.com
+      kubectl delete crd servicemonitors.monitoring.coreos.com
+      kubectl delete crd podmonitors.monitoring.coreos.com
+      kubectl delete crd alertmanagers.monitoring.coreos.com
+      kubectl delete crd thanosrulers.monitoring.coreos.com
+      ```
+
+      ## Upgrading Chart
+
+      ```console
+      # Helm 3 or 2
+      $ helm upgrade [RELEASE_NAME] prometheus-community/kube-prometheus-stack
+      ```
+
+      _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documentation._
+
+      ### Upgrading an existing Release to a new major version
+
+      A major chart version change (like v1.2.3 -> v2.0.0) indicates that there is an incompatible breaking change needing manual actions.
+
+      ### From 8.x to 9.x
+
+      Version 9 of the helm chart removes the existing `additionalScrapeConfigsExternal` in favour of `additionalScrapeConfigsSecret`. This change lets users specify the secret name and secret key to use for the additional scrape configuration of prometheus. This is useful for users that have prometheus-operator as a subchart and also have a template that creates the additional scrape configuration.
+
+      ### From 7.x to 8.x
+
+      Due to new template functions being used in the rules in version 8.x.x of the chart, an upgrade to Prometheus Operator and Prometheus is necessary in order to support them. First, upgrade to the latest version of 7.x.x
+
+      ```sh
+      helm upgrade [RELEASE_NAME] prometheus-community/kube-prometheus-stack --version 7.5.0
+      ```
+
+      Then upgrade to 8.x.x
+
+      ```sh
+      helm upgrade [RELEASE_NAME] prometheus-community/kube-prometheus-stack --version [8.x.x]
+      ```
+
+      Minimal recommended Prometheus version for this chart release is `2.12.x`
+
+      ### From 6.x to 7.x
+
+      Due to a change in grafana subchart, version 7.x.x now requires Helm >= 2.12.0.
+
+      ### From 5.x to 6.x
+
+      Due to a change in deployment labels of kube-state-metrics, the upgrade requires `helm upgrade --force` in order to re-create the deployment. If this is not done an error will occur indicating that the deployment cannot be modified:
+
+      ```console
+      invalid: spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string{"app.kubernetes.io/name":"kube-state-metrics"}, MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: field is immutable
+      ```
+
+      If this error has already been encountered, a `helm history` command can be used to determine which release has worked, then `helm rollback` to the release, then `helm upgrade --force` to this new one
+
+      ## Configuration
+
+      See [Customizing the Chart Before Installing](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing). To see all configurable options with detailed comments:
+
+      ```console
+      helm show values prometheus-community/kube-prometheus-stack
+      ```
+
+      You may also run `helm show values` on this chart's [dependencies](#dependencies) for additional options.
+
+      ### Rancher Monitoring Configuration
+
+      The following table shows values exposed by Rancher Monitoring's additions to the chart:
+
+      | Parameter | Description | Default |
+      | ----- | ----------- | ------ |
+      | `nameOverride` | Provide a name that should be used instead of the chart name when naming all resources deployed by this chart |`"rancher-monitoring"`|
+      | `namespaceOverride` | Override the deployment namespace | `"cattle-monitoring-system"` |
+      | `global.rbac.userRoles.create` | Create default user ClusterRoles to allow users to interact with Prometheus CRs, ConfigMaps, and Secrets | `true` |
+      | `global.rbac.userRoles.aggregateToDefaultRoles` | Aggregate default user ClusterRoles into default k8s ClusterRoles | `true` |
+      | `prometheus-adapter.enabled` | Whether to install [prometheus-adapter](https://github.com/helm/charts/tree/master/stable/prometheus-adapter) within the cluster | `true` |
+      | `prometheus-adapter.prometheus.url` | A URL pointing to the Prometheus deployment within your cluster. The default value is set based on the assumption that you plan to deploy the default Prometheus instance from this chart where `.Values.namespaceOverride=cattle-monitoring-system` and `.Values.nameOverride=rancher-monitoring` | `http://rancher-monitoring-prometheus.cattle-monitoring-system.svc` |
+      | `prometheus-adapter.prometheus.port` | The port on the Prometheus deployment that Prometheus Adapter can make requests to | `9090` |
+      | `prometheus.prometheusSpec.ignoreNamespaceSelectors` | Ignore NamespaceSelector settings from the PodMonitor and ServiceMonitor configs. If true, PodMonitors and ServiceMonitors can only discover Pods and Services within the namespace they are deployed into | `false` |
+      | `alertmanager.secret.cleanupOnUninstall` | Whether or not to trigger a job to clean up the alertmanager config secret to be deleted on a `helm uninstall`. By default, this is disabled to prevent the loss of alerting configuration on an uninstall. | `false` |
+      | `alertmanager.secret.image.pullPolicy` | Image pull policy for job(s) related to alertmanager config secret's lifecycle | `IfNotPresent` |
+      | `alertmanager.secret.image.repository` | Repository to use for job(s) related to alertmanager config secret's lifecycle | `rancher/rancher-agent` |
+      | `alertmanager.secret.image.tag` | Tag to use for job(s) related to alertmanager config secret's lifecycle | `v2.4.8` |
+
+      The following values are enabled for different distributions via [rancher-pushprox](https://github.com/rancher/dev-charts/tree/master/packages/rancher-pushprox). See the rancher-pushprox `README.md` for more information on what all values can be configured for the PushProxy chart.
+
+      | Parameter | Description | Default |
+      | ----- | ----------- | ------ |
+      | `rkeControllerManager.enabled` | Create a PushProx installation for monitoring kube-controller-manager metrics in RKE clusters | `false` |
+      | `rkeScheduler.enabled` | Create a PushProx installation for monitoring kube-scheduler metrics in RKE clusters | `false` |
+      | `rkeProxy.enabled` | Create a PushProx installation for monitoring kube-proxy metrics in RKE clusters | `false` |
+      | `rkeEtcd.enabled` | Create a PushProx installation for monitoring etcd metrics in RKE clusters | `false` |
+      | `k3sServer.enabled` | Create a PushProx installation for monitoring k3s-server metrics (accounts for kube-controller-manager, kube-scheduler, and kube-proxy metrics) in k3s clusters | `false` |
+      | `kubeAdmControllerManager.enabled` | Create a PushProx installation for monitoring kube-controller-manager metrics in kubeAdm clusters | `false` |
+      | `kubeAdmScheduler.enabled` | Create a PushProx installation for monitoring kube-scheduler metrics in kubeAdm clusters | `false` |
+      | `kubeAdmProxy.enabled` | Create a PushProx installation for monitoring kube-proxy metrics in kubeAdm clusters | `false` |
+      | `kubeAdmEtcd.enabled` | Create a PushProx installation for monitoring etcd metrics in kubeAdm clusters | `false` |
+
+
+      ### Multiple releases
+
+      The same chart can be used to run multiple Prometheus instances in the same cluster if required. To achieve this, it is necessary to run only one instance of prometheus-operator and a pair of alertmanager pods for an HA configuration, while all other components need to be disabled. To disable a dependency during installation, set `kubeStateMetrics.enabled`, `nodeExporter.enabled` and `grafana.enabled` to `false`.
+
+      ## Work-Arounds for Known Issues
+
+      ### Running on private GKE clusters
+
+      When Google configure the control plane for private clusters, they automatically configure VPC peering between your Kubernetes cluster’s network and a separate Google managed project. In order to restrict what Google are able to access within your cluster, the firewall rules configured restrict access to your Kubernetes pods. This means that in order to use the webhook component with a GKE private cluster, you must configure an additional firewall rule to allow the GKE control plane access to your webhook pod.
+
+      You can read more information on how to add firewall rules for the GKE control plane nodes in the [GKE docs](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#add_firewall_rules)
+
+      Alternatively, you can disable the hooks by setting `prometheusOperator.admissionWebhooks.enabled=false`.
+
+      ### Helm fails to create CRDs
+
+      You should upgrade to Helm 2.14 + in order to avoid this issue. However, if you are stuck with an earlier Helm release you should instead use the following approach: Due to a bug in helm, it is possible for the 5 CRDs that are created by this chart to fail to get fully deployed before Helm attempts to create resources that require them. This affects all versions of Helm with a [potential fix pending](https://github.com/helm/helm/pull/5112). In order to work around this issue when installing the chart you will need to make sure all 5 CRDs exist in the cluster first and disable their previsioning by the chart:
+
+      1. Create CRDs
+
+          ```console
+          kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/release-0.38/example/prometheus-operator-crd/monitoring.coreos.com_alertmanagers.yaml
+          kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/release-0.38/example/prometheus-operator-crd/monitoring.coreos.com_podmonitors.yaml
+          kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/release-0.38/example/prometheus-operator-crd/monitoring.coreos.com_prometheuses.yaml
+          kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/release-0.38/example/prometheus-operator-crd/monitoring.coreos.com_prometheusrules.yaml
+          kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/release-0.38/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml
+          kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/release-0.38/example/prometheus-operator-crd/monitoring.coreos.com_thanosrulers.yaml
+          ```
+
+      2. Wait for CRDs to be created, which should only take a few seconds
+      3. [Install](#install-chart) the chart, but disable the CRD provisioning by setting `prometheusOperator.createCustomResource` to `false`
+
+      ## PrometheusRules Admission Webhooks
+
+      With Prometheus Operator version 0.30+, the core Prometheus Operator pod exposes an endpoint that will integrate with the `validatingwebhookconfiguration` Kubernetes feature to prevent malformed rules from being added to the cluster.
+
+      ### How the Chart Configures the Hooks
+
+      A validating and mutating webhook configuration requires the endpoint to which the request is sent to use TLS. It is possible to set up custom certificates to do this, but in most cases, a self-signed certificate is enough. The setup of this component requires some more complex orchestration when using helm. The steps are created to be idempotent and to allow turning the feature on and off without running into helm quirks.
+
+      1. A pre-install hook provisions a certificate into the same namespace using a format compatible with provisioning using end-user certificates. If the certificate already exists, the hook exits.
+      2. The prometheus operator pod is configured to use a TLS proxy container, which will load that certificate.
+      3. Validating and Mutating webhook configurations are created in the cluster, with their failure mode set to Ignore. This allows rules to be created by the same chart at the same time, even though the webhook has not yet been fully set up - it does not have the correct CA field set.
+      4. A post-install hook reads the CA from the secret created by step 1 and patches the Validating and Mutating webhook configurations. This process will allow a custom CA provisioned by some other process to also be patched into the webhook configurations. The chosen failure policy is also patched into the webhook configurations
+
+      ### Alternatives
+
+      It should be possible to use [jetstack/cert-manager](https://github.com/jetstack/cert-manager) if a more complete solution is required, but it has not been tested.
+
+      ### Limitations
+
+      Because the operator can only run as a single pod, there is potential for this component failure to cause rule deployment failure. Because this risk is outweighed by the benefit of having validation, the feature is enabled by default.
+
+      ## Developing Prometheus Rules and Grafana Dashboards
+
+      This chart Grafana Dashboards and Prometheus Rules are just a copy from [prometheus-operator/prometheus-operator](https://github.com/prometheus-operator/prometheus-operator) and other sources, synced (with alterations) by scripts in [hack](hack) folder. In order to introduce any changes you need to first [add them to the original repo](https://github.com/prometheus-operator/kube-prometheus/blob/master/docs/developing-prometheus-rules-and-grafana-dashboards.md) and then sync there by scripts.
+
+      ## Further Information
+
+      For more in-depth documentation of configuration options meanings, please see
+
+      - [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator)
+      - [Prometheus](https://prometheus.io/docs/introduction/overview/)
+      - [Grafana](https://github.com/grafana/helm-charts/tree/main/charts/grafana#grafana-helm-chart)
+
+      ## prometheus.io/scrape
+
+      The prometheus operator does not support annotation-based discovery of services, using the `serviceMonitor` CRD in its place as it provides far more configuration options. For information on how to use servicemonitors, please see the documentation on the `prometheus-operator/prometheus-operator` documentation here: [Running Exporters](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/running-exporters.md)
+
+      By default, Prometheus discovers ServiceMonitors within its namespace, that are labeled with the same release tag as the prometheus-operator release. Sometimes, you may need to discover custom ServiceMonitors, for example used to scrape data from third-party applications. An easy way of doing this, without compromising the default ServiceMonitors discovery, is allowing Prometheus to discover all ServiceMonitors within its namespace, without applying label filtering. To do so, you can set `prometheus.prometheusSpec.serviceMonitorSelectorNilUsesHelmValues` to `false`.
+
+      ## Migrating from coreos/prometheus-operator chart
+
+      The multiple charts have been combined into a single chart that installs prometheus operator, prometheus, alertmanager, grafana as well as the multitude of exporters necessary to monitor a cluster.
+
+      There is no simple and direct migration path between the charts as the changes are extensive and intended to make the chart easier to support.
+
+      The capabilities of the old chart are all available in the new chart, including the ability to run multiple prometheus instances on a single cluster - you will need to disable the parts of the chart you do not wish to deploy.
+
+      You can check out the tickets for this change [here](https://github.com/prometheus-operator/prometheus-operator/issues/592) and [here](https://github.com/helm/charts/pull/6765).
+
+      ### High-level overview of Changes
+
+      #### Added dependencies
+
+      The chart has added 3 [dependencies](#dependencies).
+
+      - Node-Exporter, Kube-State-Metrics: These components are loaded as dependencies into the chart, and are relatively simple components
+      - Grafana: The Grafana chart is more feature-rich than this chart - it contains a sidecar that is able to load data sources and dashboards from configmaps deployed into the same cluster. For more information check out the [documentation for the chart](https://github.com/helm/charts/tree/master/stable/grafana)
+
+      #### CoreOS CRDs
+
+      The CRDs are provisioned using a separate chart installation within the Helm chart `rancher-monitoring-crd` that is packaged alongside this chart.
+
+      #### Kubelet Service
+
+      Because the kubelet service has a new name in the chart, make sure to clean up the old kubelet service in the `kube-system` namespace to prevent counting container metrics twice.
+
+      #### Persistent Volumes
+
+      If you would like to keep the data of the current persistent volumes, it should be possible to attach existing volumes to new PVCs and PVs that are created using the conventions in the new chart. For example, in order to use an existing Azure disk for a helm release called `prometheus-migration` the following resources can be created:
+
+      ```yaml
+      apiVersion: v1
+      kind: PersistentVolume
+      metadata:
+        name: pvc-prometheus-migration-prometheus-0
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        azureDisk:
+          cachingMode: None
+          diskName: pvc-prometheus-migration-prometheus-0
+          diskURI: /subscriptions/f5125d82-2622-4c50-8d25-3f7ba3e9ac4b/resourceGroups/sample-migration-resource-group/providers/Microsoft.Compute/disks/pvc-prometheus-migration-prometheus-0
+          fsType: ""
+          kind: Managed
+          readOnly: false
+        capacity:
+          storage: 1Gi
+        persistentVolumeReclaimPolicy: Delete
+        storageClassName: prometheus
+        volumeMode: Filesystem
+      ```
+
+      ```yaml
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
+        labels:
+          app: prometheus
+          prometheus: prometheus-migration-prometheus
+        name: prometheus-prometheus-migration-prometheus-db-prometheus-prometheus-migration-prometheus-0
+        namespace: monitoring
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        dataSource: null
+        resources:
+          requests:
+            storage: 1Gi
+        storageClassName: prometheus
+        volumeMode: Filesystem
+        volumeName: pvc-prometheus-migration-prometheus-0
+      status:
+        accessModes:
+        - ReadWriteOnce
+        capacity:
+          storage: 1Gi
+      ```
+
+      The PVC will take ownership of the PV and when you create a release using a persistent volume claim template it will use the existing PVCs as they match the naming convention used by the chart. For other cloud providers similar approaches can be used.
+
+      #### KubeProxy
+
+      The metrics bind address of kube-proxy is default to `127.0.0.1:10249` that prometheus instances **cannot** access to. You should expose metrics by changing `metricsBindAddress` field value to `0.0.0.0:10249` if you want to collect them.
+
+      Depending on the cluster, the relevant part `config.conf` will be in ConfigMap `kube-system/kube-proxy` or `kube-system/kube-proxy-config`. For example:
+
+      ```console
+      kubectl -n kube-system edit cm kube-proxy
+      ```
+
+      ```yaml
+      apiVersion: v1
+      data:
+        config.conf: |-
+          apiVersion: kubeproxy.config.k8s.io/v1alpha1
+          kind: KubeProxyConfiguration
+          # ...
+          # metricsBindAddress: 127.0.0.1:10249
+          metricsBindAddress: 0.0.0.0:10249
+          # ...
+        kubeconfig.conf: |-
+          # ...
+      kind: ConfigMap
+      metadata:
+        labels:
+          app: kube-proxy
+        name: kube-proxy
+        namespace: kube-system
+      ```
+    status: deployed
+  name: rancher-monitoring
+  namespace: cattle-monitoring-system
+  resources:
+  - apiVersion: v1
+    kind: Namespace
+    name: cattle-dashboards
+  - apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    name: default-allow-all
+    namespace: cattle-monitoring-system
+  - apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    name: default-allow-all
+    namespace: cattle-dashboards
+  - apiVersion: policy/v1beta1
+    kind: PodSecurityPolicy
+    name: rancher-monitoring-grafana
+    namespace: cattle-monitoring-system
+  - apiVersion: policy/v1beta1
+    kind: PodSecurityPolicy
+    name: rancher-monitoring-grafana-test
+    namespace: cattle-monitoring-system
+  - apiVersion: policy/v1beta1
+    kind: PodSecurityPolicy
+    name: rancher-monitoring-kube-state-metrics
+  - apiVersion: policy/v1beta1
+    kind: PodSecurityPolicy
+    name: rancher-monitoring-prometheus-node-exporter
+    namespace: cattle-monitoring-system
+  - apiVersion: policy/v1beta1
+    kind: PodSecurityPolicy
+    name: rancher-monitoring-alertmanager
+  - apiVersion: policy/v1beta1
+    kind: PodSecurityPolicy
+    name: rancher-monitoring-operator
+  - apiVersion: policy/v1beta1
+    kind: PodSecurityPolicy
+    name: rancher-monitoring-prometheus
+  - apiVersion: v1
+    kind: ServiceAccount
+    name: rancher-monitoring-grafana
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ServiceAccount
+    name: rancher-monitoring-grafana-test
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ServiceAccount
+    name: rancher-monitoring-kube-state-metrics
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ServiceAccount
+    name: rancher-monitoring-prometheus-adapter
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ServiceAccount
+    name: rancher-monitoring-prometheus-node-exporter
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ServiceAccount
+    name: rancher-monitoring-alertmanager
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ServiceAccount
+    name: rancher-monitoring-operator
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ServiceAccount
+    name: rancher-monitoring-prometheus
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ServiceAccount
+    name: rancher-monitoring-patch-sa
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: Secret
+    name: rancher-monitoring-grafana
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-grafana-config-dashboards
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-grafana
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ConfigMap
+    name: grafana-nginx-proxy-config
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-grafana-test
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-prometheus-adapter
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-grafana-datasource
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-apiserver
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-cluster-total
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-k8s-coredns
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-k8s-resources-cluster
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-k8s-resources-namespace
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-k8s-resources-node
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-k8s-resources-pod
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-k8s-resources-workload
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-k8s-resources-workloads-namespace
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-kubelet
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-namespace-by-pod
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-namespace-by-workload
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-node-cluster-rsrc-use
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-node-rsrc-use
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-nodes
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-persistentvolumesusage
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-pod-total
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-prometheus
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-statefulset
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-workload-total
+    namespace: cattle-dashboards
+  - apiVersion: v1
+    kind: ConfigMap
+    name: prometheus-nginx-proxy-config
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: ConfigMap
+    name: rancher-monitoring-home
+    namespace: cattle-dashboards
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: rancher-monitoring-grafana-clusterrole
+  - apiVersion: rbac.authorization.k8s.io/v1beta1
+    kind: ClusterRole
+    name: rancher-monitoring-kube-state-metrics
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: psp-rancher-monitoring-kube-state-metrics
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: prometheus-adapter-server-resources
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: prometheus-adapter-resource-reader
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: psp-rancher-monitoring-prometheus-node-exporter
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: rancher-monitoring-operator
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: rancher-monitoring-operator-psp
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: rancher-monitoring-prometheus
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: rancher-monitoring-prometheus-psp
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: monitoring-admin
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: monitoring-edit
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: monitoring-view
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    name: rancher-monitoring-patch-sa
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: rancher-monitoring-grafana-clusterrolebinding
+  - apiVersion: rbac.authorization.k8s.io/v1beta1
+    kind: ClusterRoleBinding
+    name: rancher-monitoring-kube-state-metrics
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: psp-rancher-monitoring-kube-state-metrics
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: prometheus-adapter:system:auth-delegator
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: prometheus-adapter-resource-reader
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: prometheus-adapter-hpa-controller
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: psp-rancher-monitoring-prometheus-node-exporter
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: rancher-monitoring-operator
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: rancher-monitoring-operator-psp
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: rancher-monitoring-prometheus
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: rancher-monitoring-prometheus-psp
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: rancher-monitoring-patch-sa
+  - apiVersion: rbac.authorization.k8s.io/v1beta1
+    kind: Role
+    name: rancher-monitoring-grafana
+    namespace: cattle-monitoring-system
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: Role
+    name: rancher-monitoring-grafana-test
+    namespace: cattle-monitoring-system
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: Role
+    name: rancher-monitoring-alertmanager
+    namespace: cattle-monitoring-system
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: Role
+    name: monitoring-config-admin
+    namespace: cattle-monitoring-system
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: Role
+    name: monitoring-config-edit
+    namespace: cattle-monitoring-system
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: Role
+    name: monitoring-config-view
+    namespace: cattle-monitoring-system
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: Role
+    name: monitoring-dashboard-admin
+    namespace: cattle-dashboards
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: Role
+    name: monitoring-dashboard-edit
+    namespace: cattle-dashboards
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: Role
+    name: monitoring-dashboard-view
+    namespace: cattle-dashboards
+  - apiVersion: rbac.authorization.k8s.io/v1beta1
+    kind: RoleBinding
+    name: rancher-monitoring-grafana
+    namespace: cattle-monitoring-system
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: RoleBinding
+    name: rancher-monitoring-grafana-test
+    namespace: cattle-monitoring-system
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: RoleBinding
+    name: prometheus-adapter-auth-reader
+    namespace: cattle-monitoring-system
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: RoleBinding
+    name: rancher-monitoring-alertmanager
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: Service
+    name: rancher-monitoring-grafana
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: Service
+    name: rancher-monitoring-kube-state-metrics
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: Service
+    name: rancher-monitoring-prometheus-adapter
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: Service
+    name: rancher-monitoring-prometheus-node-exporter
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: Service
+    name: rancher-monitoring-alertmanager
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: Service
+    name: rancher-monitoring-coredns
+    namespace: kube-system
+  - apiVersion: v1
+    kind: Service
+    name: rancher-monitoring-operator
+    namespace: cattle-monitoring-system
+  - apiVersion: v1
+    kind: Service
+    name: rancher-monitoring-prometheus
+    namespace: cattle-monitoring-system
+  - apiVersion: apps/v1
+    kind: DaemonSet
+    name: rancher-monitoring-prometheus-node-exporter
+    namespace: cattle-monitoring-system
+  - apiVersion: apps/v1
+    kind: Deployment
+    name: rancher-monitoring-grafana
+    namespace: cattle-monitoring-system
+  - apiVersion: apps/v1
+    kind: Deployment
+    name: rancher-monitoring-kube-state-metrics
+    namespace: cattle-monitoring-system
+  - apiVersion: apps/v1
+    kind: Deployment
+    name: rancher-monitoring-prometheus-adapter
+    namespace: cattle-monitoring-system
+  - apiVersion: apps/v1
+    kind: Deployment
+    name: rancher-monitoring-operator
+    namespace: cattle-monitoring-system
+  - apiVersion: apiregistration.k8s.io/v1beta1
+    kind: APIService
+    name: v1beta1.custom.metrics.k8s.io
+  - apiVersion: monitoring.coreos.com/v1
+    kind: Alertmanager
+    name: rancher-monitoring-alertmanager
+    namespace: cattle-monitoring-system
+  - apiVersion: admissionregistration.k8s.io/v1beta1
+    kind: MutatingWebhookConfiguration
+    name: rancher-monitoring-admission
+  - apiVersion: monitoring.coreos.com/v1
+    kind: Prometheus
+    name: rancher-monitoring-prometheus
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-alertmanager.rules
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-general.rules
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-k8s.rules
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kube-apiserver-availability.rules
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kube-apiserver-slos
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kube-apiserver.rules
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kube-prometheus-general.rules
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kube-prometheus-node-recording.rules
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kube-state-metrics
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kubelet.rules
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kubernetes-apps
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kubernetes-resources
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kubernetes-storage
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kubernetes-system-apiserver
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kubernetes-system-kubelet
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kubernetes-system
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-node-exporter.rules
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-node-exporter
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-node-network
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-node.rules
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-kube-prometheus
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    name: rancher-monitoring-prometheus
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: ServiceMonitor
+    name: rancher-monitoring-alertmanager
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: ServiceMonitor
+    name: rancher-monitoring-coredns
+    namespace: kube-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: ServiceMonitor
+    name: rancher-monitoring-apiserver
+    namespace: default
+  - apiVersion: monitoring.coreos.com/v1
+    kind: ServiceMonitor
+    name: rancher-monitoring-kube-state-metrics
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: ServiceMonitor
+    name: rancher-monitoring-kubelet
+    namespace: kube-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: ServiceMonitor
+    name: rancher-monitoring-node-exporter
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: ServiceMonitor
+    name: rancher-monitoring-grafana
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: ServiceMonitor
+    name: rancher-monitoring-operator
+    namespace: cattle-monitoring-system
+  - apiVersion: monitoring.coreos.com/v1
+    kind: ServiceMonitor
+    name: rancher-monitoring-prometheus
+    namespace: cattle-monitoring-system
+  - apiVersion: admissionregistration.k8s.io/v1beta1
+    kind: ValidatingWebhookConfiguration
+    name: rancher-monitoring-admission
+  values:
+    alertmanager:
+      alertmanagerSpec:
+        configSecret: alertmanager-rancher-monitoring-alertmanager
+        useExistingSecret: true
+    global:
+      cattle:
+        clusterId: local
+        clusterName: local
+        systemDefaultRegistry: ""
+      systemDefaultRegistry: ""
+    prometheus:
+      prometheusSpec:
+        evaluationInterval: 1m
+        retentionSize: 50GiB
+        scrapeInterval: 1m
+    prometheusOperator:
+      hostNetwork: true
+  version: 1
+status:
+  observedGeneration: 2
+  summary:
+    state: deployed
